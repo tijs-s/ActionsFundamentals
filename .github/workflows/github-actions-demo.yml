@@ -16,7 +16,7 @@ jobs:
         steps:
             - name: Output results
               run: |
-                echo "Triggered by, ${{ github.event }}!"
-                echo "Triggered by, ${{ github.ref }}!"
+                echo "Triggered by, ${{ toJson(github.event) }}!"
+                echo "Triggered by, ${{ toJson(github.ref) }}!"
                 echo "Listing all files in the repository:"
                 ls -R .
